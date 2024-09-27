@@ -4,3 +4,5 @@ Simply copy the following code to your server or hosting environment, then use i
 https://example.com/script_folder/search.php?query=your_text
 
 Replace your_text with the search term or query you want to look for.
+
+demo: https://cvt.su/x/search/index.php
