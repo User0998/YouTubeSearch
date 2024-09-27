@@ -145,17 +145,22 @@ function iget($url = null)  {
     
     header("Content-Type: application/json");
     $i1 = search($_GET["query"]);
-    $i2 = getSearchNext(file_get_contents("session.me"));
-    $i3 = getSearchNext(file_get_contents("session.me"));
-    $i4 = getSearchNext(file_get_contents("session.me"));
-    $i5 = getSearchNext(file_get_contents("session.me"));
-    $i6 = getSearchNext(file_get_contents("session.me"));
-    $i7 = getSearchNext(file_get_contents("session.me"));
-    $i9 = getSearchNext(file_get_contents("session.me"));
-    $i0 = getSearchNext(file_get_contents("session.me"));    
-    $str = "]\n}[";
-    $str1 = "][";
-    $result = str_replace([$str, $str1], ",", $i1.$i2.$i3.$i4.$i5.$i6.$i7.$i8.$i9.$i0)."}";
+    $i2 = getSearchNext(file_get_contents("session.me")); 
+// Retrieves the next set of search results using the content of "session.me".
+/*
+ To increase the number of search results, simply copy the code at line 148 
+ (the line where $i2 is assigned) and create a new variable like $i3, $i4, etc.
+ Then, concatenate the new variables after $i2.
+ For example, you could do: $i1.$i2.$i3.$i4 to line 162.
+ This will keep adding more search results, but keep in mind that increasing the 
+ number of results will also increase the request time.
+*/
+$str = "]\n}[";
+$str1 = "][";
+// Replace the unwanted characters or patterns ("]\n}[" and "][") in the concatenated 
+// search result ($i1.$i2) with a comma (",") to format the output correctly.
+$result = str_replace([$str, $str1], ",", $i1.$i2)."}";
+// After replacing the patterns, add a closing curly brace "}" to complete the formatted result.
     echo $result;
 #json_decode($result)->result[100]->title;
     
