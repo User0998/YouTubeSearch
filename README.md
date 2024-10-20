@@ -7,4 +7,3 @@ Replace your_text with the search term or query you want to look for.
 
 demo: https://cvt.su/x/search/index.php?query=GitHub
 
-Free hosting: https://hostx.cc
